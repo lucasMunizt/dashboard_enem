@@ -2,10 +2,6 @@ import pandas as pd
 
 df = pd.read_csv("limpo_sad.csv",sep=";", encoding="utf-8")
 
-# md_regiaoNordeste = df[df["NO_REGIAO"] == "Nordeste"][
-#     ["NU_NOTA_MT", "NU_NOTA_CN", "NU_NOTA_LC", "NU_NOTA_CH", "NU_NOTA_REDACAO"]
-# ].mean()
-
 qtdParticipantes = df["NU_INSCRICAO"].count()
 
 df["media_geral"] = df[["NU_NOTA_MT", "NU_NOTA_CN", "NU_NOTA_LC", "NU_NOTA_CH", "NU_NOTA_REDACAO"]].mean(axis=1)
